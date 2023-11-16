@@ -1,5 +1,5 @@
-NAME = zombie
-SRC = $(addprefix $(DIR_SRC), main.cpp)
+NAME = bureaucrat
+SRC = $(addprefix $(DIR_SRC), main.cpp Bureaucrat.cpp)
 FLAGS = -std=c++98 -Wall -Wextra -Werror
 DEPFLAGS = -MMD -MP
 DIR_OBJ = tmp/
