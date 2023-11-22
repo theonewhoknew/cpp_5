@@ -26,6 +26,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade): _name(name)
 Bureaucrat::Bureaucrat(Bureaucrat &copy)
 {	
 	this->_grade = copy.getGrade();
+	this->_name = copy.getName();
 }
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat &copy)
