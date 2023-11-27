@@ -1,4 +1,4 @@
-NAME = bureaucrat
+NAME = form
 SRC = $(addprefix $(DIR_SRC), main.cpp Bureaucrat.cpp Form.cpp)
 FLAGS = -std=c++98 -Wall -Wextra -Werror
 DEPFLAGS = -MMD -MP

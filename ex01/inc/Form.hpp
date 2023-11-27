@@ -4,24 +4,28 @@
 # include <iostream>
 # include <exception>
 
+class Bureaucrat;
+
 class Form
 {
 private:
 	const std::string	_name;
 	bool				_signed;
-	const	int			_sign;
-	const	int			_exec;
+	const	int			_sign_grade;
+	const	int			_exec_grade;
 
 public:
 	Form();
 	Form(const std::string name, const int sign, const int exec);
 	Form(Form &copy);
-	Form& operator=(const Form &copy);
+	Form& operator=(const Form &instance);
 	~Form();
 	std::string	getName(void) const;
-	bool		getSigned(void);
+	bool		getSigned(void) const;
 	int			getSignGrade(void) const;
 	int			getExecGrade(void) const;
+	void		setSigned(void);
+	void		beSigned(const Bureaucrat &signer);
 	class		GradeTooHighException : public std::exception
 	{
 		public:
@@ -32,7 +36,6 @@ public:
 		public:
 			virtual const char *what() const throw();
 	};
-
 };
 
 std::ostream & operator<<(std::ostream &o, const Form &reference);
