@@ -24,14 +24,19 @@ public:
 	bool		getSigned(void) const;
 	int			getSignGrade(void) const;
 	int			getExecGrade(void) const;
-	void		setSigned(void);
+	void		setSigned(bool state);
 	void		beSigned(const Bureaucrat &signer);
-	class		GradeTooHighException : public std::exception
+	class Exception : public std::exception
+	{
+		public:
+			virtual const char* what() const throw();
+	};
+	class		GradeTooHighException : public Form::Exception
 	{
 		public:
 			virtual const char *what() const throw();
 	};
-	class		GradeTooLowException : public std::exception
+	class		GradeTooLowException : public Form::Exception
 	{
 		public:
 			virtual const char *what() const throw();
