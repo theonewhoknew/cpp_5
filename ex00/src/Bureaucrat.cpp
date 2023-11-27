@@ -49,6 +49,11 @@ int	Bureaucrat::getGrade() const
 	return (this->_grade);
 }
 
+void	Bureaucrat::setGrade(const int new_grade)
+{
+	this->_grade = new_grade;
+}
+
 void	Bureaucrat::incrementGrade()
 {	
 	if (this->_grade - 1 < 1)
@@ -63,14 +68,19 @@ void	Bureaucrat::decrementGrade()
 	this->_grade++;
 }
 
+const char *Bureaucrat::Exception::what(void) const throw()
+{
+	return ("Bureaucrat Exception. ");
+};
+
 const char *Bureaucrat::GradeTooHighException::what(void) const throw()
 {
-	return ("Bureaucrat: Grade too high");
+	return ("Grade too high!");
 };
 
 const char *Bureaucrat::GradeTooLowException::what(void) const throw()
 {
-	return ("Bureaucrat: Grade too low");
+	return ("Grade too low!");
 };
 
 std::ostream & operator<<(std::ostream & o, const Bureaucrat &reference)

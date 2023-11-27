@@ -19,14 +19,20 @@ public:
 	~Bureaucrat();
 	std::string	getName(void) const;
 	int			getGrade(void) const;
+	void		setGrade(const int new_grade);
 	void		incrementGrade(void);
 	void		decrementGrade(void);
-	class		GradeTooHighException : public std::exception
+	class Exception : public std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};
+	class		GradeTooHighException : public Bureaucrat::Exception
 	{
 		public:
 			virtual const char *what() const throw();
 	};
-	class		GradeTooLowException : public std::exception
+	class		GradeTooLowException : public Bureaucrat::Exception
 	{
 		public:
 			virtual const char *what() const throw();

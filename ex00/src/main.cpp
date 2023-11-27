@@ -2,32 +2,77 @@
 
 int	main()
 {
+		// CONSTRUCTING BAD GRADE //
+	std::cout << std::endl;
+	std::cout << "CONSTRUCTING INVALID GRADE" << std::endl;
 	try
 	{
-		Bureaucrat *a = new Bureaucrat("anon", 150);
-		Bureaucrat b("dani", 45);
-		std::cout << *a << std::endl << b << std::endl;
+		Bureaucrat John("John", -49);
 	}
-	catch(const Bureaucrat::GradeTooLowException& e)
+	catch (Bureaucrat::Exception &e)
 	{
-		std::cerr << e.what() << std::endl;
+		std::cout << e.what();
 	}
+	std::cout << std::endl << std::endl;
 	try
 	{
-		Bureaucrat b(0);
+		Bureaucrat John("John", 256);
 	}
-	catch(const Bureaucrat::GradeTooHighException& e)
+	catch (Bureaucrat::Exception &e)
 	{
-		std::cerr << e.what() << std::endl;
+		std::cout << e.what();
 	}
+	std::cout << std::endl << std::endl;
+	std::cout << std::endl;
+
+	/*INCREMENT - DECREMENT*/
+
+	std::cout << "INCREMENT - DECREMENT" << std::endl;
+	Bureaucrat Paul("Paul", 1);
 	try
 	{
-		Bureaucrat b(1);
-		b.incrementGrade();
+		Paul.decrementGrade();
 	}
-	catch(const Bureaucrat::GradeTooHighException& e)
+	catch (Bureaucrat::Exception &e)
 	{
-		std::cerr << e.what() << std::endl;
+		std::cout << e.what();
 	}
-	
+	std::cout << Paul << std::endl;
+	try
+	{
+		Paul.incrementGrade();
+	}
+	catch (Bureaucrat::Exception &e)
+	{
+		std::cout << e.what();
+	}
+	std::cout << Paul;
+	std::cout << std::endl << std::endl;
+
+	/*INCREMENT EXCEPTION*/
+
+	std::cout << std::endl;
+
+	try
+	{
+		Paul.incrementGrade();
+	}
+	catch (Bureaucrat::Exception &e)
+	{
+		std::cout << e.what();
+	}
+	std::cout << std::endl << std::endl;
+
+	Paul.setGrade(150);
+	try
+	{
+		Paul.decrementGrade();
+	}
+	catch (Bureaucrat::Exception &e)
+	{
+		std::cout << e.what();
+	}
+	std::cout << std::endl << std::endl;
+
+	return (0);
 }
