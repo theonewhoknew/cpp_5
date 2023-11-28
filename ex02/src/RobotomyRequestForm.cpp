@@ -66,7 +66,7 @@ void	robotomize(const std::string &target)
 	if (rand() % 2)
 		std::cout << target << "was robotomized succesfully!" << std::endl;
 	else
-		std::cout << "Ooops, something went wrong and " << target << " is a little bit hurt!" << std::endl;
+		std::cout << "Ooops, something went wrong and " << target << " is still human!" << std::endl;
 }
 
 std::ostream & operator<<(std::ostream & o, const RobotomyRequestForm &reference)
@@ -78,6 +78,6 @@ std::ostream & operator<<(std::ostream & o, const RobotomyRequestForm &reference
 		o << "IS NOT ";
 	o << "signed. Grade required to sign is " << reference.getSignGrade() << ". Grade required to execute is "
 	<< reference.getExecGrade() << ". ";
-	o << "The form asked to have robotomize " << reference.getTarget();
+	o << "The form asks to robotomize " << reference.getTarget() << ".";
 	return (o);
 }

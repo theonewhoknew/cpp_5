@@ -2,6 +2,7 @@
 #include "../inc/Bureaucrat.hpp"
 #include "../inc/ShrubberyCreationForm.hpp"
 #include "../inc/RobotomyRequestForm.hpp"
+#include "../inc/PresidentialPardonForm.hpp"
 
 int main(void)
 {
@@ -19,4 +20,11 @@ int main(void)
 	John.signForm(C54);
 	John.executeForm(C54);
 
+	std::cout << C54 << std::endl;
+
+	PresidentialPardonForm Z89("John");
+
+	John.signForm(Z89);
+	John.executeForm(Z89);
+	
 }

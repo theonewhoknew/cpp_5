@@ -82,6 +82,6 @@ std::ostream & operator<<(std::ostream & o, const ShrubberyCreationForm &referen
 		o << "IS NOT ";
 	o << "signed. Grade required to sign is " << reference.getSignGrade() << ". Grade required to execute is "
 	<< reference.getExecGrade() << ". ";
-	o << "The form asked to have a shrubbery at " << reference.getTarget();
+	o << "The form asks to have a shrubbery at " << reference.getTarget() << ".";
 	return (o);
 }

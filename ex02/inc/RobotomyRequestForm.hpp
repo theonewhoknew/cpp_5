@@ -30,6 +30,6 @@ public:
 
 void		robotomize(const std::string &target);
 
-std::ostream & operator<<(std::ostream &o, const AForm &reference);
+std::ostream & operator<<(std::ostream &o, const RobotomyRequestForm &reference);
 
 #endif
