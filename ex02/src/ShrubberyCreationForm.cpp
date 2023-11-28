@@ -73,3 +73,15 @@ void drawTree(std::ofstream &file)
     file << "|\n";
 }
 
+std::ostream & operator<<(std::ostream & o, const ShrubberyCreationForm &reference)
+{
+	o << "Form " << reference.getName() << ", ";
+	if (reference.getSigned())
+		o << "IS ";
+	else
+		o << "IS NOT ";
+	o << "signed. Grade required to sign is " << reference.getSignGrade() << ". Grade required to execute is "
+	<< reference.getExecGrade() << ". ";
+	o << "The form asked to have a shrubbery at " << reference.getTarget();
+	return (o);
+}

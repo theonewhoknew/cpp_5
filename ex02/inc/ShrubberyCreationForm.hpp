@@ -29,7 +29,7 @@ public:
 };
 
 
-std::ostream & operator<<(std::ostream &o, const AForm &reference);
+std::ostream & operator<<(std::ostream &o, const ShrubberyCreationForm &reference);
 
 void	drawTree(std::ofstream &file);
 
