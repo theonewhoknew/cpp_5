@@ -19,7 +19,7 @@ public:
 	AForm(const std::string name, const int sign, const int exec);
 	AForm(AForm &copy);
 	AForm& operator=(const AForm &instance);
-	~AForm();
+	virtual ~AForm();
 	
 	std::string	getName(void) const;
 	bool		getSigned(void) const;
