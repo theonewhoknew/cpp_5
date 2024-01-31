@@ -74,5 +74,11 @@ int	main()
 	}
 	std::cout << std::endl << std::endl;
 
+
+	std::cout << "Insertion operator test" << std::endl;
+	std::cout << std::endl << std::endl;
+
+	std::cout << Paul << std::endl;
+
 	return (0);
 }
