@@ -64,7 +64,7 @@ void	robotomize(const std::string &target)
 	std::cout << "Bzzzz BzzzzBzzzzBzzzz Bzzzz BzzzzBzzzz " << std::endl;
 	sleep(1);
 	if (rand() % 2)
-		std::cout << target << "was robotomized succesfully!" << std::endl;
+		std::cout << target << " was robotomized succesfully!" << std::endl;
 	else
 		std::cout << "Ooops, something went wrong and " << target << " is still human!" << std::endl;
 }

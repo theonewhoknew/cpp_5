@@ -7,13 +7,22 @@
 int main(void)
 {
 	ShrubberyCreationForm A20("home");
+	ShrubberyCreationForm A22("great");
 
 	Bureaucrat John("John", 40);
 
+	John.executeForm(A20);
 	John.signForm(A20);
 	John.executeForm(A20);
 
+	John.signForm(A22);
+	John.executeForm(A22);
+
 	std::cout << A20 << std::endl;
+
+	Bureaucrat Paul("Paul", 150);
+
+	Paul.signForm(A20);
 
 	RobotomyRequestForm C54("John");
 

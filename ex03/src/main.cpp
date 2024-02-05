@@ -10,5 +10,5 @@ int main(void)
 	Intern someRandomIntern;
 	AForm* rrf;
 	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-	delete (rrf);	
+	delete rrf;	
 }

@@ -24,20 +24,16 @@ public:
 	void		incrementGrade(void);
 	void		decrementGrade(void);
 	void		signForm(Form &form);
-	class Exception : public std::exception
+	
+	class		GradeTooHighException : public std::exception
 	{
 		public:
-			virtual const char* what() const throw();
+			const char *what() const throw();
 	};
-	class		GradeTooHighException : public Bureaucrat::Exception
+	class		GradeTooLowException : public std::exception
 	{
 		public:
-			virtual const char *what() const throw();
-	};
-	class		GradeTooLowException : public Bureaucrat::Exception
-	{
-		public:
-			virtual const char *what() const throw();
+			const char *what() const throw();
 	};
 };
 

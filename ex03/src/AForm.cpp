@@ -55,11 +55,6 @@ void AForm::setSigned(bool state)
 	this->_signed = state;
 }
 
-const char *AForm::Exception::what(void) const throw()
-{
-	return ("AForm Exception.");
-};
-
 const char *AForm::FormNotSignedException::what(void) const throw()
 {
 	return ("Form is not signed!");

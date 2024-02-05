@@ -30,26 +30,21 @@ public:
 
 	virtual void		beSigned(const Bureaucrat &signer) = 0;
 	virtual void		execute(const Bureaucrat &executor) const = 0;
-	
-	class Exception : public std::exception
+
+	class		FormNotSignedException : public std::exception
 	{
 		public:
-			virtual const char* what() const throw();
+			const char *what() const throw();
 	};
-	class		FormNotSignedException : public AForm::Exception
+	class		GradeTooHighException : public std::exception
 	{
 		public:
-			virtual const char *what() const throw();
+			 const char *what() const throw();
 	};
-	class		GradeTooHighException : public AForm::Exception
+	class		GradeTooLowException : public std::exception
 	{
 		public:
-			virtual const char *what() const throw();
-	};
-	class		GradeTooLowException : public AForm::Exception
-	{
-		public:
-			virtual const char *what() const throw();
+			 const char *what() const throw();
 	};
 };
 

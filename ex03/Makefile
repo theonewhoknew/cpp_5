@@ -1,4 +1,4 @@
-NAME = aform
+NAME = intern
 SRC = $(addprefix $(DIR_SRC), main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp \
 								Intern.cpp)
 FLAGS = -std=c++98 -Wall -Wextra -Werror

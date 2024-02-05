@@ -9,7 +9,7 @@ int	main()
 	{
 		Bureaucrat John("John", -49);
 	}
-	catch (Bureaucrat::Exception &e)
+	catch (std::exception &e)
 	{
 		std::cout << e.what();
 	}
@@ -18,7 +18,7 @@ int	main()
 	{
 		Bureaucrat John("John", 256);
 	}
-	catch (Bureaucrat::Exception &e)
+	catch (std::exception &e)
 	{
 		std::cout << e.what();
 	}
@@ -33,7 +33,7 @@ int	main()
 	{
 		Paul.decrementGrade();
 	}
-	catch (Bureaucrat::Exception &e)
+	catch (std::exception &e)
 	{
 		std::cout << e.what();
 	}
@@ -42,7 +42,7 @@ int	main()
 	{
 		Paul.incrementGrade();
 	}
-	catch (Bureaucrat::Exception &e)
+	catch (std::exception &e)
 	{
 		std::cout << e.what();
 	}
@@ -57,7 +57,7 @@ int	main()
 	{
 		Paul.incrementGrade();
 	}
-	catch (Bureaucrat::Exception &e)
+	catch (std::exception &e)
 	{
 		std::cout << e.what();
 	}
@@ -68,7 +68,7 @@ int	main()
 	{
 		Paul.decrementGrade();
 	}
-	catch (Bureaucrat::Exception &e)
+	catch (std::exception &e)
 	{
 		std::cout << e.what();
 	}

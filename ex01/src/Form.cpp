@@ -55,12 +55,6 @@ void Form::setSigned(bool state)
 	this->_signed = state;
 }
 
-const char *Form::Exception::what(void) const throw()
-{
-	return ("Form Exception.");
-};
-
-
 const char *Form::GradeTooHighException::what(void) const throw()
 {
 	return ("Grade too high!");
